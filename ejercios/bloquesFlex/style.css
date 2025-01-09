@@ -1,0 +1,16 @@
+.container {
+  height: 550px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid black;
+  background-color: grey;
+}
+
+.sub-content {
+  height: 100px;
+  width: 210px;
+  background-color: mediumblue;
+  border: solid black;
+  /* display: inline-block; */
+}
