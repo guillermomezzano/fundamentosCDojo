@@ -41,24 +41,35 @@
         </section>
         <section>
             <!-- card uno -->
-            <div class="conteiner-section-one">
+            <article class="conteiner-section-one">
                 <div class="conteiner-section-p">
-                    <p>texto parrafo</p>
+                    <p>Discover succuulent varietes one pot or rack a time!</p>
+                    <p id="discover">Discover</p>
                 </div>
-                <div> <img onmouseover="over(this)" onmouseout="out(this)" class="img-conteiner-section-one"
-                        src="./img/aeonium-s.jpg"> </div>
-            </div>
+                <div>
+                    <img onmouseover="over(this)" onmouseout="out(this)" class="img-conteiner-section-one"
+                        src="./img/aeonium-s.jpg">
+                </div>
+
+            </article>
             <!-- contenedor de imagen y boton -->
+            <button class="button-message" onclick="changeText()">cambiar texto</button>
             <div>
                 <div>
                     <img src="" alt="">
                 </div>
                 <div>
-                    <button></button>
+
                 </div>
             </div>
         </section>
         <footer></footer>
+        <div class="conteiner-message">
+            <img class="img-message" src="./img/cart-dark.png">
+            <p>Discover succuulent varietes one pot or rack a time! Discover succuulent varietes one pot or rack a
+                time!<a href="#">vinculo</a></p>
+            <button class="button-message" onclick="removeMessage()">evento onclick</button>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>
