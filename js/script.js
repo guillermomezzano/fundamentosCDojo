@@ -1,11 +1,14 @@
 var tipoVariable = "hola como estan";
-let tipoLet = 34;
+let tipoLet;
+tipoLet = 35;
+
 const tipoConst = true;
 
 var tipoVariable = 5;
+
 tipoVariable = true;
 
-tipoLet = 45;
+tipoLet = true;
 
 // const alumnos = ["alex", "vicente", "nico", "chris"];
 
@@ -53,14 +56,53 @@ const alumno = {
 // console.log(alumno["nacionalidad"]);
 
 // const nombre = alumno.nombre;
-// const apeliido = alumno.apeliido;
+// const apellido = alumno.apellido;
 // const nacionalidad = alumno.nacionalidad;
 
-const { nombre, apellido, nacionalidad } = alumno;
+// const { nombre, apellido, nacionalidad } = alumno;
 
-console.log(nombre);
-console.log(apellido);
-console.log(nacionalidad);
+// console.log(nombre);
+// console.log(apellido);
+// console.log(nacionalidad);
+
+// __spread_____
+
+// console.log(alumno);
+// const alumnoSpread = alumno
+
+// const alumnoSpread = { ...alumno, estadoCivil: "soltero", nombre: "camilo" };
+// // console.log(alumno);
+// // console.log(alumnoSpread);
+// const arrayCero = [4, 5, 6];
+// const arrayUno = [1, 2, 3];
+// const arrayDos = [...arrayUno, ...arrayCero];
+// // console.log(arrayUno);
+// // console.log(arrayDos);
+
+// function sumar(...numeros) {
+//   console.log(numeros);
+//   return numeros.reduce((acc, num) => acc + num, 0);
+// }
+
+// console.log(sumar(1, 2, 5));
+
+// _____ternario_______
+
+let evaluacion;
+
+if (alumno.edad > 30) {
+  evaluacion = "mayor a 30";
+  // add logica
+} else {
+  evaluacion = "menor a 30";
+  // add logica
+}
+
+evaluacion = alumno.edad > 30 ? "mayor a 30" : "menor a 30";
+
+// condicion ? retorno si la condicion se cumple : retorno si la condicion no se cumple
+
+// console.log(evaluacion);
 
 const alumnos = [
   {
@@ -89,14 +131,57 @@ const alumnos = [
   },
 ];
 
+if (alumno.edad > 30) {
+  evaluacion = "mayor a 30";
+  // add logica
+} else {
+  evaluacion = "menor a 30";
+  // add logica
+}
+
+evaluacion = alumno.edad > 30 ? "mayor a 30" : "menor a 30";
+// condicion ? retorno si la condicion se cumple : retorno si la condicion no se cumple
+
+//con if else
+// function condicionEdad(alumnos) {
+//   for (let i = 0; i < alumnos.length; i++) {
+//     if (alumnos[i].edad > 40) {
+//       console.log(`el alumno ${alumnos[i].nombre} es mayor a 40 años`);
+//     } else {
+//       console.log(`el alumno ${alumnos[i].nombre} es menor a 40 años`);
+//     }
+//   }
+// }
+
+// con operdador ternario
 function condicionEdad(alumnos) {
   for (let i = 0; i < alumnos.length; i++) {
-    if (alumnos[i].edad > 40) {
-      console.log(`el alumno ${alumnos[i].nombre} es mayor a 40 años`);
-    } else {
-      console.log(`el alumno ${alumnos[i].nombre} es menor a 40 años`);
-    }
+    alumnos[i].edad > 40
+      ? console.log(`el alumno ${alumnos[i].nombre} es mayor a 40 años`)
+      : console.log(`el alumno ${alumnos[i].nombre} es menor a 40 años`);
   }
 }
 
-condicionEdad(alumnos);
+// condicionEdad(alumnos);
+
+//sin ternario
+function suma(num1, num2) {
+  const resultado = num1 + num2;
+  if (resultado % 2 === 0) {
+    return `el resultado es par ${resultado}`;
+  } else {
+    return `el resultado es inpar ${resultado}`;
+  }
+}
+
+//con ternario
+function suma(num1, num2) {
+  const resultado = num1 + num2;
+
+  return resultado % 2 === 0
+    ? `el resultado es par ${resultado}`
+    : `el resultado es inpar ${resultado}`;
+}
+
+const resultadoSuma = suma(1, 2);
+console.log(resultadoSuma);

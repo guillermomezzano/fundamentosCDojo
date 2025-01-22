@@ -9,11 +9,16 @@
 
 <body>
     <h1>api rick and morthy</h1>
-    <form onsubmit="cargarData(event)">
+    <form onsubmit="cargarDataAxios(event)">
+        <label for="idPersonaje">
+            ingresa el id del personajes
+        </label>
+        <input id="idPersonaje" type="number" />
         <button>cargar personajes</button>
     </form>
     <div id="resultados"></div>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 
 </html>
